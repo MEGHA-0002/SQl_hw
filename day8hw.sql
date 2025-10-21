@@ -5,7 +5,8 @@ USE BookStoreDB;
 CREATE TABLE authors (
     author_id INT PRIMARY KEY,
     name VARCHAR(100),
-    country VARCHAR(100)
+    country VARCHAR(100),
+    FOREIGN KEY (author_id) REFERENCES authors(author_id)
 );
 
 CREATE TABLE books (
@@ -20,3 +21,4 @@ ADD published_year INT;
 TRUNCATE TABLE books;
 
 DROP DATABASE BookStoreDB;
+
